@@ -1,0 +1,39 @@
+ * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #15284bab;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.content {
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 5rem;
+  gap: 1.5rem;
+  
+}
+
+
+#inputQuestion::placeholder {
+  color: #dbdbdb;
+}
+
+#inputQuestion,
+#result {
+  min-height: 5rem;
+  min-width: 25rem;
+  outline: none;
+  border: transparent;
+  border-radius: .5rem;
+  padding: 1rem;
+  background-color: #324972b9;
+  color: #ffff;
+  font-family: Arial, Helvetica, sans-serif;
+}
