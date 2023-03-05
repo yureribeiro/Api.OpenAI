@@ -6,16 +6,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="./img/chatgpt-icon.jpg">
-  <script defer src="index.js"></script>
+  <script  defer src="index.js"></script>
   <title>Davinci 003</title>
 </head>
+
 <body>
+    <header class="header">
+      <div class="containerTips">
+         <details class="tips">
+        <summary>Exemplos</summary>
+      "Tem alguma ideia crativa para <br> 
+      um aniversário de 10 anos?"
+      </details>
+      <details class="tips">
+        <summary>Limitações</summary>
+       - Ocasionalmente pode gerar informações incorretas.<br>
+       - Conhecimento limitado do mundo e eventos após 2021.
+      </details>
+      <details class="tips">
+        <summary>Mais</summary>
+        OpenAI API modelo davinci do chatGPT<br>
+         para desenvolver este website.
+      </details>
+      </div>
+     
 
-    <div class="content">
-      <textarea id="result" rows="10" disabled placeholder="Resposta IA"></textarea>
-      <textarea id="inputQuestion" placeholder="Faça uma pergunta"></textarea>
-    </div>
+      <div class="credits">
+        <p> Yure Ribeiro 2023 </p>
+        <p> Credito: OpenAI </p>
+      </div>
+    </header>
 
-    
+      <div class="container">
+        <textarea id="result" rows="10" disabled placeholder="Resposta IA"></textarea>
+        <textarea id="inputQuestion" placeholder="Faça uma pergunta"></textarea>
+      </div>        
 </body>
+
 </html>

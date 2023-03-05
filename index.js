@@ -1,12 +1,13 @@
 const inputQuestion = document.getElementById('inputQuestion')
 const result = document.getElementById('result')
-require('dotenv').config();
+
+
 
 inputQuestion.addEventListener('keypress', (e) => {
-  if(inputQuestion.value && e.key === "Enter") SendQuestion()
+  if (inputQuestion.value && e.key === "Enter") SendQuestion()
 })
 
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY
+const OPENAI_API_KEY = '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'
 
 function SendQuestion() {
   let Question = inputQuestion.value
@@ -25,29 +26,29 @@ function SendQuestion() {
       temperature: 0.5, //criatividade da resposta
     })
   })
-  .then((response) => response.json())
-  .then((json) => {
-    if(result.value) result.value =+ '\n'
+    .then((response) => response.json())
+    .then((json) => {
+      if (result.value) result.value = + '\n'
 
-    if(json.error?.message) {
-      result.value += `Error: ${json.error.message}`
-    } else if (json.choices?.[0].text) {
-      let text = json.choices[0].text || 'Sem resposta'
+      if (json.error?.message) {
+        result.value += `Error: ${json.error.message}`
+      } else if (json.choices?.[0].text) {
+        let text = json.choices[0].text || 'Sem resposta'
 
-      result.value += ' Chat GPT: ' + text
-    }
+        result.value += text
+      }
 
-    result.scrollTop = result.scrollHeight
-  })
-  
-  .catch((error) => console.error('Error: ', error))
-  .finally(() => {
-    inputQuestion.value = ''
-    inputQuestion.desable = false
-    inputQuestion.focus()
-  })
+      result.scrollTop = result.scrollHeight
+    })
 
-  if (result.value) result.value += '\n\n\n'
+    .catch((error) => console.error('Error: ', error))
+    .finally(() => {
+      inputQuestion.value = ''
+      inputQuestion.desable = false
+      inputQuestion.focus()
+    })
+
+  if (result.value) result.value += '\n\n'
 
   result.value += `Eu: ${Question}`
   inputQuestion.value = 'Carregando...'

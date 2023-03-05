@@ -2,38 +2,101 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-  background-color: #15284bab;
+  height: 100vh;
+  background: linear-gradient( 125deg, #15284baf, #220544 ) ;
   display: flex;
   justify-content: center;
   align-items: center;
- 
 }
 
-.content {
+.header {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #101d36ab;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  padding: 1.5rem 2.5rem 1.5rem 1.5rem;
+  border-right: .1rem solid #dbdbdb80;
+}
+
+.containerTips {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-left: 1rem;
+}
+
+.tips {
+  color: #dbdbdbe7;
+  background-color: #071633;
+  box-shadow: .1rem .1rem .3rem #132f66fb;
+  border-radius: .5rem;
+  padding: .5rem 1rem;
+}
+
+summary {
+  margin-bottom: .5rem;
+  font-size: .9rem;
+}
+
+.credits {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  padding-left: 1rem;
+  text-align: center;
+  color: #dbdbdba8;
+  font-size: .79rem;
+  font-style: italic;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   margin: 5rem;
-  gap: 1.5rem;
-  
+  gap: 1rem;
+  padding-left: 9rem;
 }
 
-
-#inputQuestion::placeholder {
-  color: #dbdbdb;
-}
-
-#inputQuestion,
 #result {
-  min-height: 5rem;
-  min-width: 25rem;
+  margin-top: 1rem;
+  min-height: 85vh;
+  min-width: 100%;
   outline: none;
   border: transparent;
   border-radius: .5rem;
   padding: 1rem;
   background-color: #324972b9;
+  box-shadow: .1rem .1rem 1rem #071633fb;
+  border: .1rem solid #dbdbdb5e;
   color: #ffff;
-  font-family: Arial, Helvetica, sans-serif;
 }
+#result::placeholder {
+  color: #dbdbdba8;
+}
+
+
+#inputQuestion {
+  color: #ffff;
+  background-color: #324972b9; 
+  padding: .5rem 1rem 0 1rem; 
+  outline: none;
+  border: .1rem solid #dbdbdb5e;
+  border-radius: .5rem;
+  box-shadow: .1rem .1rem 1rem #071633fb;
+}
+#inputQuestion::placeholder {
+  color: #dbdbdba8;
+}
+#inputQuestion:hover{
+  border: .1rem solid #2a55a5ab;
+}
+
