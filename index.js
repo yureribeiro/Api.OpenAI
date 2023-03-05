@@ -1,13 +1,9 @@
 const inputQuestion = document.getElementById('inputQuestion')
 const result = document.getElementById('result')
 
-
-
 inputQuestion.addEventListener('keypress', (e) => {
   if (inputQuestion.value && e.key === "Enter") SendQuestion()
 })
-
-const OPENAI_API_KEY = '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'
 
 function SendQuestion() {
   let Question = inputQuestion.value
@@ -17,7 +13,7 @@ function SendQuestion() {
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',
-      Authorization: `Bearer  ${OPENAI_API_KEY}`
+      Authorization: `Bearer  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`
     },
     body: JSON.stringify({
       model: 'text-davinci-003',
